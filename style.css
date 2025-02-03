@@ -1,0 +1,29 @@
+/* Basic styling - customize as needed */
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-area, .memory-visualization, .metrics {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+#kernel-code {
+    width: 400px;
+    height: 200px;
+}
+
+.memory-visualization div {
+    width: 100px;
+    height: 60px;
+    border: 1px solid blue;
+    margin: 5px;
+    text-align: center;
+    line-height: 60px;
+}

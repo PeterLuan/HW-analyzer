@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RDNA3.5 GPU Kernel Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>RDNA3.5 GPU Kernel Analyzer</h1>
+
+    <div class="container">
+        <div class="input-area">
+            <h2>GPU Kernel Input</h2>
+            <textarea id="kernel-code" placeholder="Enter your simplified GPU kernel code here..."></textarea>
+            <button id="analyze-button">Analyze Kernel</button>
+        </div>
+
+        <div class="memory-visualization">
+            <h2>Memory Hierarchy</h2>
+            <div id="l1-cache">L1 Cache</div>
+            <div id="l2-cache">L2 Cache</div>
+            <div id="lds">LDS</div>
+            <div id="global-memory">Global Memory</div>
+        </div>
+
+        <div class="metrics">
+            <h2>Performance Metrics</h2>
+            <p>L1 Hit Rate: <span id="l1-hit-rate"></span></p>
+            <p>L2 Hit Rate: <span id="l2-hit-rate"></span></p>
+            <p>LDS Utilization: <span id="lds-utilization"></span></p>
+            </div>
+    </div>
+
+    <script src="dist/bundle.js"></script> </body>
+</html>
