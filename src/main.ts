@@ -26,7 +26,7 @@ type MemoryBlock = {
 };
 
 // Cache Class
-class Cache {
+class GPUCache {
     size: number;
     blocks: Map<number, MemoryBlock>;
     hitCount: number;
@@ -116,8 +116,8 @@ class LDS {
 }
 
 // Memory Hierarchy
-const l1Cache = new Cache(L1_SIZE, 64); // Assume 64-byte cache lines for L1
-const l2Cache = new Cache(L2_SIZE, 64); // Assume 64-byte cache lines for L2
+const l1Cache = new GPUCache(L1_SIZE, 64); // Assume 64-byte cache lines for L1
+const l2Cache = new GPUCache(L2_SIZE, 64); // Assume 64-byte cache lines for L2
 const lds = new LDS(LDS_SIZE);
 const globalMemory = { size: GLOBAL_MEMORY_SIZE }; // Not tracking individual blocks for simplicity
 
